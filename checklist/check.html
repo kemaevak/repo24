@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чек-лист готовности</title>
+    <link rel="stylesheet" href="check.css">
+    <link rel="icon" href="../img_main/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- Шапка сайта -->
+<header class="header">
+    <nav class="header__nav">
+        <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="../index.html">ГЛАВНАЯ</a></li>
+            <li class="header__item">
+                <a class="header__link" href="../postupl/postupl.html">ПОСТУПЛЕНИЕ</a>
+                <ul class="dropdown">
+                    <li><a href="check.html">ЧЕК-ЛИСТ ГОТОВНОСТИ</a></li>
+                    <li><a href="../putgeo/putgeo.html">КАК ДОБРАТЬСЯ</a></li>
+                </ul>
+            </li>
+            <li class="header__item"><a class="header__link" href="../uchen/uchen.html">УЧЕНИКАМ</a></li>           
+            <li class="header__item"><a class="header__link" href="../news/news.html">НОВОСТИ</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Чек лист -->
+<div class="checklist-container">
+    <h2>Чек-лист вашей готовности к учебе</h2>
+    <div id="checklist">
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item1">
+            <label for="item1">Единая школьная легкая накидка</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item2">
+            <label for="item2">Единая школьная зимняя накидка</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item3">
+            <label for="item3">Зимние ботинки (на выбор ученика)</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item4">
+            <label for="item4">Личные вещи для повседневной жизни</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item5">
+            <label for="item5">Наем факультетной одежды (происходит автоматическая бронь, необходимо внести 3 галеона в день распределения)</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item6">
+            <label for="item6">Магические кольца или перстни для колдовства</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item7">
+            <label for="item6">Оберег от погоды и местных духов леса (по желанию)</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item8">
+            <label for="item6">Защитный оберег (смягчает атакующие заклинания, падения и т.п.) (по желанию)</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item9">
+            <label for="item6">Перо (серебристой ледяной гусиной или росомахиной) и стакан с магической чернильной</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item10">
+            <label for="item6">Свитки или дневники для ваших конспектов</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item11">
+            <label for="item6">Набор для зельеварения - 3 штуки</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item12">
+            <label for="item6">Набор для дуэлей - 1 штука</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item13">
+            <label for="item6">Полетная метла</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item14">
+            <label for="item6">Алхимический порошок общего типа - 1 килограмм</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" onclick="updateProgress()" id="item15">
+            <label for="item6">Ваш питомец (по желанию)</label>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div id="progress-text">Вы готовы на 0%</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Футер сайта -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="../img_main/лого.png" alt="Логотип Колдовстворца">
+        <div class="footer-copyright">
+            <p>© 2024 Колдовстворец. Все права защищены.</p>
+        </div>
+    </div>
+  </footer>
+  
+  <!-- Подключение JavaScript -->
+  <script src="check.js"></script>
+  </body>
+  </html>

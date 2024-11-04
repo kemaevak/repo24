@@ -1,0 +1,244 @@
+/* Общие стили */
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+font-family: 'Times New Roman', sans-serif;
+}
+
+body {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 100vh;
+text-align: center;
+background-color: #f8f8f8; 
+}
+@font-face {
+font-family: 'Scandal';
+src: url('../Skandal.ttf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+
+/* МЕНЮ */
+.header {
+width: 100%;
+background-color: rgb(112, 130, 142);
+position: fixed; 
+top: 0;
+left: 0;
+z-index: 1000; 
+padding: 10px 0; 
+transition: background-color 0.3s ease; 
+}
+/* Применяем шрифт к элементам шапки */
+.header, .header__link, .dropdown, .dropdown a {
+font-family: 'Skandal', sans-serif;
+}
+.dropdown a {
+font-family: 'Scandal', sans-serif !important;
+}
+/* Стиль для шапки при наведении */
+.header:hover {
+background-color: rgb(112, 130, 142); 
+}
+/* Стили навигации в шапке */
+.header__nav {
+width: auto; 
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 40px; 
+}
+/* Стили списка в шапке */
+.header__list {
+list-style: none; 
+padding: 0;
+margin: 0;
+display: flex;
+gap: 30px; 
+}
+/* Стили элементов списка */
+.header__item {
+position: relative; /* Относительное позиционирование для выпадающего меню */
+}
+/* Стили ссылок в шапке */
+.header__link {
+text-decoration: none;
+font-family: 'Scandal', sans-serif;
+font-size: 20px; 
+font-weight: 400;
+color: white; /* Цвет текста */
+transition: color 0.3s ease;
+letter-spacing: 3px; 
+}
+.header__link, .dropdown a {
+font-size: 20px !important; 
+font-family: 'Scandal', sans-serif;
+color: white;
+text-align: center;
+display: block;
+padding: 10px 15px;
+}
+/* Стили ссылок при наведении */
+.header__link:hover {
+color: #ffffff; 
+opacity: 1; 
+}
+/* Стили выпадающего меню */
+.dropdown {
+display: none; 
+position: absolute;
+top: 100%; 
+right: 0; 
+background-color: #70828E; 
+border-radius: 5px;
+padding: 10px 0;
+list-style: none; 
+}
+/* Стили элементов внутри выпадающего меню */
+.dropdown li {
+  margin: 5px 0;
+}
+/* Стили ссылок в выпадающем меню */
+.dropdown a {
+text-decoration: none; 
+font-family: 'Scandal', sans-serif;
+font-size: 16px;
+color: white;
+padding: 10px 15px;
+display: block;
+transition: background-color 0.3s ease;
+}
+/* Стили ссылок при наведении в выпадающем меню */
+.dropdown a:hover {
+background-color: #70828E; 
+text-decoration: underline; 
+}
+/* Показываем выпадающее меню при наведении на родительский элемент */
+.header__item:hover .dropdown {
+display: block;
+}
+.header__link:hover {
+text-decoration: underline; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стили заголовка */
+h2 {
+  font-family: 'Scandal', 'Times New Roman', sans-serif;
+  text-align: center;
+  margin: 80px 0 20px;
+  color: #444; 
+  letter-spacing: 1px; 
+}
+.game {
+  margin-top: 50px; 
+}
+/* Стили для кнопок */
+button {
+  font-family: 'Times New Roman', sans-serif; 
+  font-size: 1.2em; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  background-color: #666; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  margin: 20px; 
+}
+
+/* Стили таймера */
+.timer {
+  font-family: 'Tumes New Roman', sans-serif; 
+  font-size: 1.5em; 
+  margin-bottom: 20px; 
+}
+
+/* Стили для игрового поля (карточек) */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 120px); 
+  grid-gap: 15px; 
+  justify-content: center; 
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Стили карточек */
+.card {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease; 
+  cursor: pointer;
+}
+
+.card.flipped {
+  transform: rotateY(180deg); 
+}
+
+/* Стили лицевой и внутренней сторон карточек */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em; 
+  background: rgba(112, 130, 142, 0.68); 
+  border-radius: 10px;
+}
+
+/* Стили для задней стороны карточек */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+
+
+
+/* ПОДВАЛ */
+.footer {
+background-color: #70828E;
+color: white;
+padding: 10px 0;
+margin: 0; 
+text-align: center;
+width: 100%; /* футер занимает всю ширину родителя */
+box-sizing: border-box; /*  внутренние отступы в ширину */
+text-align: center;
+}
+.footer-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footer-logo img {
+width: 100px;
+height: auto;
+margin-bottom: 10px;
+}
+.footer-copyright {
+font-family: 'Scandal', sans-serif;
+font-size: 16px;
+letter-spacing: 2px;
+color: #ffffff;
+}

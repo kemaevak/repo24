@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ученикам</title>
+    <link rel="stylesheet" href="uchen.css">
+    <link rel="icon" href="../img_main/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- Шапка сайта -->
+<header class="header">
+    <nav class="header__nav">
+        <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="../index.html">ГЛАВНАЯ</a></li>
+            <li class="header__item">
+                <a class="header__link" href="../postupl/postupl.html">ПОСТУПЛЕНИЕ</a>
+                <ul class="dropdown">
+                    <li><a href="../checklist/check.html">ЧЕК-ЛИСТ ГОТОВНОСТИ</a></li>
+                    <li><a href="../putgeo/putgeo.html">КАК ДОБРАТЬСЯ</a></li>
+                </ul>
+            </li>
+            <li class="header__item"><a class="header__link" href="uchen.html">УЧЕНИКАМ</a></li>           
+            <li class="header__item"><a class="header__link" href="../news/news.html">НОВОСТИ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Игрушка -->
+<section class="game">
+<div id="start-screen" class="screen">
+  <h2>Добро пожаловать в игру, но лучше бы вы сходили на уроки зельеварения</h2>
+  <button id="start-button">начать</button>
+</div>
+
+<div id="game-screen" class="screen" style="display: none;">
+  <h2>Игра на Запоминание</h2>
+  <div id="timer">Время: 0 сек</div>
+  <div id="game-board" class="game-board"></div>
+</div>
+
+<div id="end-screen" class="screen" style="display: none;">
+  <h2>Поздравляем! Вы нашли все карточки! А теперь на уроки, прогульщики зельеварения 👿!</h2>
+  <p>Ваше время: <span id="final-time"></span> секунд</p>
+  <button id="restart-button">Никаких играть снова</button>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Футер сайта -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="../img_main/лого.png" alt="Логотип Колдовстворца">
+        <div class="footer-copyright">
+            <p>© 2024 Колдовстворец. Все права защищены.</p>
+        </div>
+    </div>
+  </footer>
+  
+<!-- Подключение JavaScript -->
+<script src="uchen.js"></script>
+
+    </script>
+  </body>
+  </html>

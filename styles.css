@@ -1,0 +1,602 @@
+/* Общие стили */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', sans-serif;
+  height: 100%;
+}
+
+@font-face {
+    font-family: 'Scandal';
+    src: url('Skandal.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общий стиль для шапки */
+.header {
+    width: 100%;
+    background-color: rgba(112, 130, 142, 0.68); 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    padding: 10px 0; 
+    transition: background-color 0.3s ease; 
+}
+
+
+/* Применяем шрифт к элементам шапки */
+.header, .header__link, .dropdown, .dropdown a {
+    font-family: 'Skandal', sans-serif;
+}
+.dropdown a {
+    font-family: 'Scandal', sans-serif !important;
+}
+
+
+
+/* Стиль для шапки при наведении */
+.header:hover {
+    background-color: rgb(112, 130, 142); 
+}
+
+/* Стили навигации в шапке */
+.header__nav {
+    width: auto; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px; 
+}
+
+/* Стили списка в шапке */
+.header__list {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 30px; 
+}
+
+/* Стили элементов списка */
+.header__item {
+    position: relative; 
+}
+
+/* Стили ссылок в шапке */
+.header__link {
+    text-decoration: none;
+    font-family: 'Scandal', sans-serif;
+    font-size: 20px; 
+    font-weight: 400;
+    color: white; 
+    transition: color 0.3s ease;
+    letter-spacing: 3px; 
+}
+
+.header__link, .dropdown a {
+    font-size: 20px !important; 
+    font-family: 'Scandal', sans-serif;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 10px 15px;
+}
+
+
+/* Стили ссылок при наведении */
+.header__link:hover {
+    color: #ffffff; 
+    opacity: 1; 
+}
+
+/* Стили выпадающего меню */
+.dropdown {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    right: 0; 
+    background-color: #70828E; 
+    border-radius: 5px;
+    padding: 10px 0;
+    list-style: none; 
+}
+
+
+/* Стили элементов внутри выпадающего меню */
+.dropdown li {
+    margin: 5px 0;
+}
+
+/* Стили ссылок в выпадающем меню */
+.dropdown a {
+    text-decoration: none; 
+    font-family: 'Scandal', sans-serif;
+    font-size: 16px;
+    color: white; 
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили ссылок при наведении в выпадающем меню */
+.dropdown a:hover {
+    background-color: #70828E; 
+    text-decoration: underline; 
+}
+
+/* выпадающее меню при наведении на родительский элемент */
+.header__item:hover .dropdown {
+    display: block;
+}
+.header__link:hover {
+    text-decoration: underline; 
+}
+
+
+.welcome-section {
+    position: relative;
+    background-image: url("img_main/фон.webp");
+    background-size: 100% auto; /* Полностью охватывает ширину экрана */
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 100vh; /* Полная высота экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.particles {
+    position: absolute; /* Canvas находится поверх всей секции */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Canvas не мешает взаимодействию с логотипом */
+    z-index: 1; /* Canvas находится позади логотипа */
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logo1 {
+    width: 300px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* АНИМАЦИЯ С ЦИФР ФАКТАМИ О КОЛДОВСТВОРЦЕ */
+.line-and-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    margin-top: 0; 
+}
+
+.vertical-line {
+    width: 2px; 
+    height: 20px; 
+    background-color: #70828E; 
+    margin: 0; 
+}
+
+.center-title1 {
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 12px;
+    color: #70828E; 
+    margin-top: 0px; 
+    margin-bottom: 50px; 
+    font-weight: bold; 
+}
+.facts-section1 {
+    width: 100%; 
+    background-color: #ffffff; 
+    padding: 0 40px; 
+    margin-top: 0; 
+    box-sizing: border-box; 
+}
+
+.progress-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%; /* Занимает всю ширину родительского контейнера */
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+  
+  .progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #C4C4C4;
+    border-radius: 0;
+    margin: 20px 0;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #70828E;
+    width: 0%;
+    transition: width 1s ease;
+    border-radius: 0;
+  }
+  
+ 
+  /* Основные стили ножек */
+  .milestone {
+    position: absolute;
+    bottom: -10px; /* Расположение ниже шкалы */
+    width: 1px;
+    height: 30px;
+    background-color: #C4C4C4;
+  }
+  
+  /* Текст под ножками */
+  .milestone::after {
+    content: attr(data-label); /*  текст из data-label */
+    position: absolute;
+    top: 35px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: #C4C4C4; /* Цвет текста под ножкой */
+    white-space: normal; 
+    text-align: center; 
+    width: 150px; 
+    word-wrap: break-word; 
+    line-height: 1.2em; 
+  }
+  
+  
+  /* Стили для текста над прогресс-баром */
+  .progress-title {
+    font-family: 'Scandal', serif; /* Основной шрифт */
+    font-size: 1.0em;
+    color: #70828E;
+    margin-top: 0; /* отступ сверху, чтобы текст оказался ближе к прогресс-бару */
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    height: 3em; /* Фиксированная высота для размещения текста */
+    overflow: hidden; /* Обрезает текст, выходящий за пределы контейнера */
+    height: auto; 
+  }
+
+.milestone-reached {
+    background-color: #70828E; /* Цвет ножки */
+}
+
+.milestone-reached::after {
+    color: #70828E; /* Цвет текста под ножкой при достижении этапа */
+    opacity: 1; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* НОВОСТИ */
+/* Секция с белым фоном */
+.line-and-title-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    margin-top: 0; 
+}
+
+.vertical-line2 {
+    width: 2px; 
+    height: 20px; 
+    background-color: #ffffff; 
+    margin: 0; 
+    margin-top: -60px;
+}
+
+.center-title2 {
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 12px; 
+    color: #ffffff; 
+    margin-top: 0px; 
+    margin-bottom: 50px; 
+    font-weight: bold; 
+}
+.facts-section2 {
+    width: 100%;
+    background-color: #70828E; /* Тёмно-серый фон */
+    color: #70828E; /* Цвет текста, чтобы было читаемо на тёмном фоне */
+    padding: 60px 20px; /* Отступы внутри секции */
+    box-sizing: border-box; /* отступы в ширину */
+    margin-top: 40px; 
+}
+/* Стили для контейнера новостей */
+.news-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+}
+
+/* Карточка одной новости */
+.news-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+/* Стили для изображения в карточке */
+.news-item-image {
+    width: 100%;
+    height: auto; /* Пропорционально масштабирует изображение */
+    border-bottom: 1px solid rgba(112, 130, 142, 0.3); /* Линия снизу, чтобы отделить изображение от текста */
+}
+
+/* Заголовок каждой новости */
+.news-item-title {
+    font-family: 'Scandal', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(112, 130, 142);
+    margin-top: 15px; /* Отступ сверху после изображения */
+    margin-bottom: 5px; /* Небольшой отступ между заголовком и описанием */
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+/* Описание каждой новости */
+.news-item-description {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(80, 80, 80);
+    padding: 0 15px 20px; /* Отступы для текста, чтобы он не прилегал к краям карточки */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* КАРТА */
+.lineandtitlecontainer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    margin-top: 0; 
+}
+.vline3 {
+    width: 2px; 
+    height: 20px; 
+    background-color: #70828E; 
+    margin-top: -60px;
+}
+
+.center-title {
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 12px; 
+    color: #70828E; 
+    margin-top: 0px; 
+    margin-bottom: 50px; 
+    font-weight: bold; 
+}
+
+.map-section {
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Контейнер для карты */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Встроенная карта (iframe) */
+.embedded-map {
+    width: 100%; 
+    max-width: 1000px; 
+    height: 450px; 
+    border: 0; 
+    border-radius: 10px; 
+}
+
+
+
+
+
+
+
+/* Секция формы с тёмным фоном */
+.line-and-title-container4 {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+.vertical-line4 {
+    position: relative; 
+    z-index: 10; 
+    width: 2px;
+    height: 40px; 
+    background-color: #ffffff;
+    margin-top: -60px;
+}
+
+.form-title {
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 12px; 
+    color: #ffffff; 
+    margin-top: 0px; 
+    margin-bottom: 50px; 
+    font-weight: bold; 
+}
+.form-section {
+    width: 100%;
+    background-color: #70828E;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Контейнер формы */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Поля ввода */
+.form-input,
+.form-textarea {
+    width: 80%;
+    max-width: 900px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Times New Roman', sans-serif;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: none;
+}
+
+/* Текстовое поле */
+.form-textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Кнопка отправки */
+.form-button {
+    width: 300px;
+    padding: 12px;
+    font-size: 18px;
+    font-family: 'Scandal', serif;
+    color: #ffffff;
+    background-color: #C4C4C4;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-button:active {
+    background-color: #88929D;
+}
+
+
+
+
+
+
+
+
+
+
+/* Линия-разделитель */
+.separator-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+}
+
+
+/* Стили для футера */
+.footer {
+    background-color: #70828E;
+    color: white;
+    padding: 10px 0;
+    margin: 0; 
+    text-align: center;
+    width: 100%; /* футер занимает всю ширину родителя */
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    font-family: 'Scandal', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}

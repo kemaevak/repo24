@@ -1,0 +1,308 @@
+/* Общие стили */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', sans-serif;
+  height: 100%;
+}
+
+
+@font-face {
+  font-family: 'Scandal';
+  src: url('../Skandal.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* МЕНЮ */
+.header {
+width: 100%;
+background-color: rgba(112, 130, 142, 0.68); /* Цвет шапки с небольшой прозрачностью */
+position: fixed; 
+top: 0;
+left: 0;
+z-index: 1000; /* Чтобы шапка всегда была поверх других элементов */
+padding: 10px 0; /* Уменьшаем вертикальные отступы для тонкости */
+transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+/* Применяем шрифт к элементам шапки */
+.header, .header__link, .dropdown, .dropdown a {
+font-family: 'Skandal', sans-serif;
+}
+.dropdown a {
+font-family: 'Scandal', sans-serif !important;
+}
+/* Стиль для шапки при наведении */
+.header:hover {
+background-color: rgb(112, 130, 142); /* Меняем цвет на непрозрачный */
+}
+/* Стили навигации в шапке */
+.header__nav {
+width: auto; /* Ограничиваем ширину только нужной шириной контента */
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 40px; /* Устанавливаем отступ от правого края */
+}
+/* Стили списка в шапке */
+.header__list {
+list-style: none; /* Убираем маркеры */
+padding: 0;
+margin: 0;
+display: flex; /* Размещаем элементы горизонтально */
+gap: 30px; /* Увеличиваем расстояние между элементами для более аккуратного вида */
+}
+/* Стили элементов списка */
+.header__item {
+position: relative; /* Относительное позиционирование для выпадающего меню */
+}
+/* Стили ссылок в шапке */
+.header__link {
+text-decoration: none; /* Убираем подчеркивание */
+font-family: 'Scandal', sans-serif;
+font-size: 20px; /* Увеличенный размер шрифта для четкости */
+font-weight: 400;
+color: white; /* Цвет текста */
+transition: color 0.3s ease;
+letter-spacing: 3px; /* Межбуквенное расстояние, как на скриншоте */
+}
+.header__link, .dropdown a {
+font-size: 20px !important; /* Принудительно задаем одинаковый размер шрифта */
+font-family: 'Scandal', sans-serif;
+color: white;
+text-align: center;
+display: block;
+padding: 10px 15px;
+}
+/* Стили ссылок при наведении */
+.header__link:hover {
+color: #ffffff; /* Меняем цвет на более яркий при наведении */
+opacity: 1; /* Сохраняем полную видимость при наведении */
+}
+/* Стили выпадающего меню */
+.dropdown {
+display: none; /* Скрываем выпадающее меню по умолчанию */
+position: absolute;
+top: 100%; /* Выпадающее меню появляется прямо под родительским элементом */
+right: 0; /* Привязываем меню к правому краю */
+background-color: #70828E; /* Непрозрачный фон выпадающего меню */
+border-radius: 5px;
+padding: 10px 0;
+list-style: none; /* Убираем маркеры */
+}
+/* Стили элементов внутри выпадающего меню */
+.dropdown li {
+  margin: 5px 0;
+}
+/* Стили ссылок в выпадающем меню */
+.dropdown a {
+text-decoration: none; /* Убираем подчеркивание */
+font-family: 'Scandal', sans-serif;
+font-size: 16px;
+color: white; /* Цвет текста */
+padding: 10px 15px;
+display: block;
+transition: background-color 0.3s ease;
+}
+/* Стили ссылок при наведении в выпадающем меню */
+.dropdown a:hover {
+background-color: #70828E; /* Меняем фон при наведении */
+text-decoration: underline; /* Добавляем подчеркивание */
+}
+/* Показываем выпадающее меню при наведении на родительский элемент */
+.header__item:hover .dropdown {
+display: block;
+}
+.header__link:hover {
+text-decoration: underline; /* Добавляем подчеркивание при наведении на ссылки в меню */
+}
+
+
+
+
+/* КАРТИНКА И ПРИВЕТСТВЕННАЯ АНИМАЦИЯ */
+.welcome-section {
+position: relative;
+background-image: url("дуэль.webp"); 
+background-size: cover; /* Чтобы изображение полностью покрывало блок */
+background-position: center; /* Центрируем изображение */
+background-repeat: no-repeat; /* Изображение не повторяется */
+height: 100vh; /* Полная высота экрана */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/* АНИМАЦИОННОЕ ПРИВЕТСТВИЕ */
+.text-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: auto; 
+text-align: center;
+padding: 0 20px;
+}
+.typewriter {
+font-size: 2rem;
+color: rgb(255, 255, 255);
+white-space: pre-wrap; /* pre-wrap для сохранения разрывов строк */
+text-transform: uppercase; /* Текст заглавным */
+font-weight: bold; /* жир шрифт*/
+}
+.cursor {
+display: inline-block;
+width: 4px;
+height: 2rem;
+background-color: rgb(255, 255, 255);
+animation: cursor-blink 1s step-start infinite;
+vertical-align: middle; /* Для того, чтобы курсор выровнялся по вертикали с текстом */
+margin-left: 4px;
+}
+/* Анимация мигающего курсора */
+@keyframes cursor-blink {
+  0%, 100% {
+  background-color: rgb(255, 255, 255);
+  }
+  50% {
+  background-color: transparent;
+  }
+}
+
+
+
+
+/* ОБЩАЯ ИНФОРМАЦИЯ */
+.info-line-and-title-container {
+display: flex;
+flex-direction: column;
+align-items: center; /* Центрирует содержимое по горизонтали */
+margin-top: 0; /* Убираем верхний отступ */
+}
+.info-line-and-title-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+top: 0px; 
+}
+.info-vertical-line {
+width: 2px; /* Толщина линии */
+height: 20px; /* Высота линии, можете отрегулировать */
+background-color: #70828E; /* Цвет линии */
+margin: 0; /* Убираем все отступы */
+}
+.info-center-title1 {
+text-align: center;
+font-family: 'Times New Roman', sans-serif;
+font-size: 12px; /* Размер шрифта */
+color: #70828E; /* Цвет текста */
+margin-top: 0px; /* Небольшой отступ между линией и заголовком */
+margin-bottom: 50px; /* Убираем нижний отступ */
+font-weight: bold; /* Подчеркнем заголовок, если это нужно */
+}
+.timeline {
+max-width: 800px; /* Увеличенная ширина для прямоугольников */
+margin: 0 auto;
+position: relative;
+padding-left: 26px; /* Отступ для размещения маркера и линии */
+}
+.timeline::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 25px; /* Позиция вертикальной линии */
+width: 2px;
+background-color: #ccc;
+}
+.timeline-item {
+position: relative;
+margin-bottom: 20px;
+padding-left: 20px;
+}
+.timeline-marker {
+position: absolute;
+left: -10px; /* Центрирование кружка на линии */
+top: 15px;
+width: 16px;
+height: 16px;
+background-color: #C4C4C4; /* Цвет кружка до наведения */
+border: 3px solid #C4C4C4; /* Цвет рамки кружка */
+border-radius: 50%;
+transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+/* Изменение цвета кружка и рамки при наведении */
+.timeline-item:hover .timeline-marker,
+.timeline-item.open .timeline-marker {
+background-color: #70828E;
+border-color: #70828E;
+}
+.timeline-content {
+cursor: pointer;
+}
+.timeline-title {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+border: 2px solid #C4C4C4; /* Цвет рамки до активации */
+border-radius: 5px;
+transition: border-color 0.3s ease, color 0.3s ease;
+background-color: transparent; /* Прозрачный фон */
+font-weight: bold;
+color: #333;
+font-family: 'Scandal', sans-serif;
+}
+/* Изменение только цвета рамки при наведении */
+.timeline-item:hover .timeline-title,
+.timeline-item.open .timeline-title {
+border-color: #70828E; /* Меняется только цвет рамки */
+color: #70828E;
+}
+.timeline-title .icon {
+font-size: 1rem;
+}
+/* Обеспечение полного отображения текста */
+.timeline-text {
+max-height: 0; /* Начальное значение высоты */
+overflow: hidden; /* Скрываем всё, что выходит за пределы высоты */
+transition: max-height 0.5s ease; /* Плавное раскрытие и скрытие */
+margin-top: 10px;
+font-weight: 300;
+color: #555;
+padding-left: 20px;
+white-space: normal; /* Разрешаем перенос строк */
+text-overflow: unset; /* Отключаем троеточие */
+}
+.timeline-item.open .timeline-text {
+max-height: 500px; 
+}
+
+
+/* ПОДВАЛ */
+.footer {
+background-color: #70828E;
+color: white;
+padding: 10px 0;
+margin: 0; 
+text-align: center;
+width: 100%; /* футер занимает всю ширину родителя */
+box-sizing: border-box; /*  внутренние отступы в ширину */
+text-align: center;
+}
+.footer-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footer-logo img {
+width: 100px;
+height: auto;
+margin-bottom: 10px;
+}
+.footer-copyright {
+font-family: 'Scandal', sans-serif;
+font-size: 16px;
+letter-spacing: 2px;
+color: #ffffff;
+}

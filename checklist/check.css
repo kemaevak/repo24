@@ -1,0 +1,197 @@
+/* Общие стили */
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+font-family: 'Times New Roman', sans-serif;
+}
+
+body {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 100vh; 
+}
+@font-face {
+font-family: 'Scandal';
+src: url('../Skandal.ttf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+
+/* МЕНЮ */
+.header {
+width: 100%;
+background-color: rgb(112, 130, 142);
+position: fixed; 
+top: 0;
+left: 0;
+z-index: 1000; /* Чтобы шапка всегда была поверх других элементов */
+padding: 10px 0; /* Уменьшаем вертикальные отступы для тонкости */
+transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+/* Применяем шрифт к элементам шапки */
+.header, .header__link, .dropdown, .dropdown a {
+font-family: 'Skandal', sans-serif;
+}
+.dropdown a {
+font-family: 'Scandal', sans-serif !important;
+}
+/* Стиль для шапки при наведении */
+.header:hover {
+background-color: rgb(112, 130, 142); /* Меняем цвет на непрозрачный */
+}
+/* Стили навигации в шапке */
+.header__nav {
+width: auto; /* Ограничиваем ширину только нужной шириной контента */
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 40px; /* Устанавливаем отступ от правого края */
+}
+/* Стили списка в шапке */
+.header__list {
+list-style: none; /* Убираем маркеры */
+padding: 0;
+margin: 0;
+display: flex; /* Размещаем элементы горизонтально */
+gap: 30px; /* Увеличиваем расстояние между элементами для более аккуратного вида */
+}
+/* Стили элементов списка */
+.header__item {
+position: relative; /* Относительное позиционирование для выпадающего меню */
+}
+/* Стили ссылок в шапке */
+.header__link {
+text-decoration: none; /* Убираем подчеркивание */
+font-family: 'Scandal', sans-serif;
+font-size: 20px; /* Увеличенный размер шрифта для четкости */
+font-weight: 400;
+color: white; /* Цвет текста */
+transition: color 0.3s ease;
+letter-spacing: 3px; /* Межбуквенное расстояние, как на скриншоте */
+}
+.header__link, .dropdown a {
+font-size: 20px !important; /* Принудительно задаем одинаковый размер шрифта */
+font-family: 'Scandal', sans-serif;
+color: white;
+text-align: center;
+display: block;
+padding: 10px 15px;
+}
+/* Стили ссылок при наведении */
+.header__link:hover {
+color: #ffffff; /* Меняем цвет на более яркий при наведении */
+opacity: 1; /* Сохраняем полную видимость при наведении */
+}
+/* Стили выпадающего меню */
+.dropdown {
+display: none; /* Скрываем выпадающее меню по умолчанию */
+position: absolute;
+top: 100%; /* Выпадающее меню появляется прямо под родительским элементом */
+right: 0; /* Привязываем меню к правому краю */
+background-color: #70828E; /* Непрозрачный фон выпадающего меню */
+border-radius: 5px;
+padding: 10px 0;
+list-style: none; /* Убираем маркеры */
+}
+/* Стили элементов внутри выпадающего меню */
+.dropdown li {
+  margin: 5px 0;
+}
+/* Стили ссылок в выпадающем меню */
+.dropdown a {
+text-decoration: none; /* Убираем подчеркивание */
+font-family: 'Scandal', sans-serif;
+font-size: 16px;
+color: white; /* Цвет текста */
+padding: 10px 15px;
+display: block;
+transition: background-color 0.3s ease;
+}
+/* Стили ссылок при наведении в выпадающем меню */
+.dropdown a:hover {
+background-color: #70828E; /* Меняем фон при наведении */
+text-decoration: underline; /* Добавляем подчеркивание */
+}
+/* Показываем выпадающее меню при наведении на родительский элемент */
+.header__item:hover .dropdown {
+display: block;
+}
+.header__link:hover {
+text-decoration: underline; /* Добавляем подчеркивание при наведении на ссылки в меню */
+}
+
+
+/* ЧЕКЛИСТ */
+.checklist-container {
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 900px;
+margin: 100px auto 20px auto;
+}
+h2 {
+text-align: center;
+color: #333;
+font-size: 2em; /* Увеличен размер заголовка */
+}
+.checklist-item {
+display: flex;
+align-items: center;
+margin: 10px 0;
+}
+.checklist-item input[type="checkbox"] {
+margin-right: 10px;
+width: 18px;
+height: 18px;
+}
+.progress {
+text-align: center;
+margin-top: 20px;
+}
+
+.progress-bar {
+height: 40px; /* Увеличена высота индикатора прогресса */
+background-color: #70828E;
+width: 0;
+border-radius: 5px;
+}
+
+.progress-bar-container {
+background-color: #ddd;
+border-radius: 5px;
+height: 40px; /* Увеличена высота контейнера прогресса */
+width: 100%;
+}
+
+
+/* ПОДВАЛ */
+.footer {
+background-color: #70828E;
+color: white;
+padding: 10px 0;
+margin: 0; 
+text-align: center;
+width: 100%; /* футер занимает всю ширину родителя */
+box-sizing: border-box; /*  внутренние отступы в ширину */
+text-align: center;
+}
+.footer-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footer-logo img {
+width: 100px;
+height: auto;
+margin-bottom: 10px;
+}
+.footer-copyright {
+font-family: 'Scandal', sans-serif;
+font-size: 16px;
+letter-spacing: 2px;
+color: #ffffff;
+}

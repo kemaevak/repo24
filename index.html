@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Хэд -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колдовстворец</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
+    <link rel="icon" href="img_main/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- вау, это что, страница? -->
+<body>
+
+<!-- Шапка сайта (цсс вроде норм) -->
+ <header class="header">
+
+    <nav class="header__nav">
+        <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="index.html">ГЛАВНАЯ</a></li>
+            <li class="header__item">
+                <a class="header__link" href="postupl/postupl.html">ПОСТУПЛЕНИЕ</a>
+                <ul class="dropdown">
+                    <li><a href="checklist/check.html">ЧЕК-ЛИСТ ГОТОВНОСТИ</a></li>
+                    <li><a href="putgeo/putgeo.html">КАК ДОБРАТЬСЯ</a></li>
+                </ul>
+            </li>
+            <li class="header__item"><a class="header__link" href="uchen/uchen.html">УЧЕНИКАМ</a></li>            
+            <li class="header__item"><a class="header__link" href="news/news.html">НОВОСТИ</a></li>
+        </ul>
+    </nav>
+ </header>
+
+<!-- Логотип на фоне картинки -->
+<section class="welcome-section">
+    <div class="logo-container">
+        <img src="img_main/лого.png" alt="Логотип Колдовстворца" class="logo1">
+    </div>
+    <div class="particles">
+        <canvas></canvas> <!-- Canvas для анимации снега -->
+    </div>
+</section>
+
+<!-- Колдовстворец в цифрах - анимированный блок -->
+<section class="facts-section1">
+    <div class="line-and-title-container">
+        <div class="vertical-line"></div> <!-- Вертикальная линия -->
+        <h2 class="center-title1">КОЛДОВСТВОРЕЦ В ЦИФРАХ</h2> <!-- Заголовок в центре -->
+    </div>
+
+    <section class="progress-section">
+        <!-- Текст, который будет изменяться -->
+        <div class="progress-title">КОЛДОВСТВОРЕЦ - САМЫЙ ДРЕВНЕЙШИЙ ЦЕНТР РУССКОЙ МАГИИ, СТИХИЙНО ОБРАЗОВАННЫЙ В 988 ГОДУ В РЕЗУЛЬТАТЕ ГОНЕНИЙ И СТАВШИЙ ЛУЧШИМ ИСТОЧНИКОМ ЗНАНИЙ</div>
+        <div class="progress-bar-container">
+            <!-- Прогресс бар -->
+            <div class="progress-bar" id="progress-bar"></div>
+
+            <!-- Ножки для этапов с атрибутами data-label для текста -->
+            <div class="milestone" style="left: 0%;" data-label="Год основания - 988"></div>
+            <div class="milestone" style="left: 30%;" data-label="Более 120 га включает территория Колдовстворца"></div>
+            <div class="milestone" style="left: 70%;" data-label="Более 5 000 учеников находится в школе"></div>
+            <div class="milestone" style="left: 100%;" data-label="Не менее 700 магических существ и растений"></div>
+        </div>
+    </section>
+</section>
+
+<!-- Новостной блок -->
+<section class="facts-section2">
+    <div class="line-and-title-container2">
+        <div class="vertical-line2"></div> <!-- Вертикальная линия 2-->
+        <h2 class="center-title2">КОЛДОВСТВОРЕЦ СЕГОДНЯ</h2>
+    </div>
+    <div class="news-container">
+        <article class="news-item">
+            <img class="news-item-image" src="img_main/лун.jpg" alt="Новость 1">
+            <h3 class="news-item-title">НОВОСТИ</h3>
+            <p class="news-item-description">Лунный фонарь - новое изобретение профессора Светозарова, которое помогает найти потерянную вещь</p>
+        </article>
+        <article class="news-item">
+            <img class="news-item-image" src="img_main/квид.jpg" alt="Новость 2">
+            <h3 class="news-item-title">НОВОСТИ</h3>
+            <p class="news-item-description">Колдовстворец одержал очередную победу на Всероссийском чемпионате по квиддичу</p>
+        </article>
+        <article class="news-item">
+            <img class="news-item-image" src="img_main/зелье.jpg" alt="Новость 3">
+            <h3 class="news-item-title">НОВОСТИ</h3>
+            <p class="news-item-description">Зелье "Морозная кожа" или как не мерзнуть зимой в Сибири</p>
+        </article>
+    </div>
+ </section>
+
+
+
+<!-- Карта на сайте -->
+ <section class="map-section">
+    <div class="lineandtitlecontainer3">
+        <div class="vline3"></div> <!-- Вертикальная линия -->
+        <h2 class="center-title">КОЛДОВСТВОРЕЦ НА КАРТЕ</h2>
+        </div>
+    <div class="map-container">
+        <!-- Вставка iframe с Google Maps - БЛЯТЬ ВСТАВИТЬ СВОЙ АЙФУХУЯР -->
+        <iframe
+        class="embedded-map"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7214826.55119664!2d98.740149!3d66.348086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjbCsDIwJzUzLjEiTiA5OMKwNDQnMjQuNSJF!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+    </div>
+ </section>
+
+
+
+<!-- Секция с формой отправки -->
+ <section class="form-section">
+    <div class="line-and-title-container4">
+        <div class="vertical-line4"></div> <!-- Вертикальная линия-->
+        <h2 class="form-title">ОТПРАВИТЬ СОВИНУЮ ПОЧТУ</h2>
+        </div>
+        <form class="contact-form" action="submit.php" method="post">
+            <input type="text" id="name" name="name" class="form-input" placeholder="Введите ваше ФИО" required>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Введите ваш email" required>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Введите текст сообщения" required></textarea>
+            <button type="submit" class="form-button">Отправка</button>
+        </form>
+ </section>
+
+<div class="separator-line"></div> <!-- Линия-разделитель --> 
+
+<!-- Футер сайта -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="img_main/лого.png" alt="Логотип Колдовстворца">
+        <div class="footer-copyright">
+            <p>© 2024 Колдовстворец. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Подключение JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

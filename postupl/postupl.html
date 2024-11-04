@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поступление в Колдовстворец</title>
+    <link rel="stylesheet" href="postupl.css">
+    <link rel="icon" href="../img_main/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- Шапка сайта -->
+<header class="header">
+    <nav class="header__nav">
+        <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="../index.html">ГЛАВНАЯ</a></li>
+            <li class="header__item">
+                <a class="header__link" href="postupl.html">ПОСТУПЛЕНИЕ</a>
+                <ul class="dropdown">
+                    <li><a href="../checklist/check.html">ЧЕК-ЛИСТ ГОТОВНОСТИ</a></li>
+                    <li><a href="../putgeo/putgeo.html">КАК ДОБРАТЬСЯ</a></li>
+                </ul>
+            </li>
+            <li class="header__item"><a class="header__link" href="../uchen/uchen.html">УЧЕНИКАМ</a></li>           
+            <li class="header__item"><a class="header__link" href="../news/news.html">НОВОСТИ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Приветствие -->
+<section class="welcome-section">
+  <div class="text-container">
+    <div id="typewriter-text" class="typewriter"></div>
+  </div>
+</section>
+
+<!-- Общая информация --> 
+<section class="info">
+  <div class="info-line-and-title-container">
+    <div class="info-vertical-line"></div> <!-- Вертикальная линия -->
+    <h2 class="info-center-title1">ОБЩАЯ ИНФОРМАЦИЯ</h2> <!-- Заголовок в центре -->
+  </div>
+  
+  <div class="hr-line mt-5 mb-5"></div>    
+
+  <div class="timeline">
+    <div class="timeline-item" id="item-1">
+    <div class="timeline-marker"></div>
+     <div class="timeline-content" onclick="toggleItem(1)">
+      <h3 class="timeline-title">
+        <span>О зачислении</span>
+        <span class="icon">ᐳ</span>
+      </h3>
+          <p class="timeline-text">Если вы получили письмо с печатью Колдовстворца и теперь находитесь на этом сайте, то адресат автоматически зачислен на обучение, и его прибытие ожидается до 8 августа. Никаких вступительных экзаменов нет, но важно, чтоб вы владели русской речью.</p>
+     </div>
+    </div>
+
+    <div class="timeline-item" id="item-2">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(2)">
+        <h3 class="timeline-title">
+          <span>О проживании в школе</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">Здесь все ученики живут в общежитиях на постоянной основе. Возвращение домой возможно в период каникул (летом - июнь, июль, зимой - январь), при госпитализации, при особых семейных обстоятельствах и при исключении. Девочки и мальчики живут отдельно на каждом из факультетов. В комнате не больше 2 человек. В комнатах ни жарко, ни холодно, как и во всей школе.</p>
+       </div>
+    </div>
+
+    <div class="timeline-item" id="item-3">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(3)">
+        <h3 class="timeline-title">
+          <span>Коммуникация с семьей</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">В школе есть совы и другие пернатые, они помогут вашей коммуникации.
+            </p>
+       </div>
+    </div>
+
+    <div class="timeline-item" id="item-4">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(4)">
+        <h3 class="timeline-title">
+          <span>О распределении по факультетам</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">8 августа все первокурсники проходят церемонию посвящения, получают гид по зданиям и наставления у мудрого кота, который и определяет факультет. Сами факультеты друг от друга не отличаются - так утверждает кот.
+            </p>
+       </div>
+    </div>
+      
+    <div class="timeline-item" id="item-5">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(5)">
+        <h3 class="timeline-title">
+          <span>Денежные моменты</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">Обучение в школе бесплатно, а вот предметы и вещи покупают сами ученики или их родители. Купить можно самостоятельно, а можно приехать пораньше в школу и воспользоваться помощью преподавателей, которые смогут показать лучшие места для покупок. Маглорожденным ученикам помогают их кураторы!
+            </p>
+       </div>
+    </div>
+
+    <div class="timeline-item" id="item-6">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(6)">
+        <h3 class="timeline-title">
+          <span>Предметы, которые необходимо иметь при поступлении</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">Форма (покупается в школе или на заказ), магическое кольцо или перстень, полетная метла, писчее перо, свитки или дневники, 3 экземпляра предметов для зельеварения, 1 набор для дуэлей, спортивная форма и др. Посмотрите полный список в чек-листе готовности. Маглорожденным ученикам приобретать вещи помогает финансово и консультационно школа! 
+            </p>
+       </div>
+    </div>
+
+    <div class="timeline-item" id="item-7">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(7)">
+        <h3 class="timeline-title">
+          <span>Путь до школы</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">Чтоб добраться до Колдовстворца, используйте самый распространенный вариант - портал на распределительном вокзале. Портал №9. Маглорожденным очень советуем посетить раздел сайта “Как добраться”.
+            </p>
+       </div>
+    </div>
+
+    <div class="timeline-item" id="item-8">
+      <div class="timeline-marker"></div>
+       <div class="timeline-content" onclick="toggleItem(8)">
+        <h3 class="timeline-title">
+          <span>Свои вещи и питомцы</span>
+          <span class="icon">ᐳ</span>
+        </h3>
+            <p class="timeline-text">Берите, что угодно, если оно не опасно, не взрывается, не воняет и т.п. Телефоны и десктопы запрещены!
+            </p>
+       </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Футер сайта -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="../img_main/лого.png" alt="Логотип Колдовстворца">
+      <div class="footer-copyright">
+          <p>© 2024 Колдовстворец. Все права защищены.</p>
+      </div>
+  </div>
+</footer>
+
+<!-- Подключение JavaScript -->
+<script src="postupl.js"></script>
+</body>
+</html>
